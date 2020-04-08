@@ -12,6 +12,7 @@ These signals were used to estimate variables of the feature vector for each pat
 These signals have been further summarized by user and activity, extracting the mean of the mean and std of each signal. 
 
 activity
+
     The labeled activity the subject has performed
     unit-
     values:
@@ -23,66 +24,102 @@ activity
     LAYING
     
 subjectId
+
     The id of the individual (subject) who performed the activity
     unit-
     values:
     1-30
 
 mean-tBodyAcc-XYZ
+
     mean of body acceleration (mean/std) in directions X,Y,Z
     unit m/s^2
+    
 mean-tGravityAcc-XYZ
+
     mean of gravital force (mean/std)  in directions X,Y,Z
     unit m/s^2
+    
 mean-tBodyAccJerk-XYZ
+
     mean of body jerk (mean/std) in directions X,Y,Z
     unit m/s^3
+    
 mean-tBodyGyro-XYZ
+
     mean of body angular velocity (mean/std) in directions X,Y,Z
     unit rad/s
+    
 mean-tBodyGyroJerk-XYZ
+
     mean of body angular jerk (mean/std) in directions X,Y,Z
     unit rad/s^3
+    
 mean-tBodyAccMag
+
     mean of magnitude in body acceleration (mean/std) 
     unit m/s^2
+    
 mean-tGravityAccMag
+
     mean of magnitude in gravital force (mean/std) 
-    unit m/s^2
+    unit m/s^
+    
 mean-tBodyAccJerkMag
+
     mean of magnitude in body jerk (mean/std) 
     unit m/s^3
+    
 mean-tBodyGyroMag
+
     mean of magnitude in body angular velocity (mean/std)
     unit rad/s
+    
 mean-tBodyGyroJerkMag
+
     mean of magnitude of body angular jerk (mean/std)
     unit rad/s^3
+    
 mean-fBodyAcc-XYZ
+
     fourier transform of mean-tBodyAcc-XYZ 
     unit: Hz
+    
 mean-fBodyAccJerk-XYZ
+
     fourier transform of mean-tBodyAccJerk-XYZ
     unit: Hz
+    
 mean-fBodyGyro-XYZ
+
     fourier transform of mean-tBodyGyro-XYZ
     unit: Hz
+    
 mean-fBodyAccMag
+
     fourier transform of mean-tBodyAccMag
     unit: Hz
+    
 mean-fBodyAccJerkMag
+
     fourier transform of mean-tBodyAccJerkMag
     unit: Hz
+    
 mean-fBodyGyroMag
+
     fourier transform of mean-tBodyGyroMag
     unit: Hz
+    
 mean-fBodyGyroJerkMag
+
     fourier transform of mean-tBodyGyroJerkMag
     unit: Hz
     
+    
 The set of variables that were estimated from these signals are: 
-mean(): Mean value
-std(): Standard deviation
+
+    mean(): Mean value
+    std(): Standard deviation
 
 # METHODS
 Feature selection on raw data:
@@ -95,7 +132,9 @@ where features is the feature file data.
 These features where then extracted from the test and train data, and these tables were then merged. 
 
 The method used for averaging per user and activity is the aggregate function, used as
+```
 aggregate(data[,3:ncol(data)], list(data$activity,data$user), mean)
+```
 which will aggregate (group) the data frame per user and activity, the run mean on all columns for that group, excluding column 1&2, which contains the user and activity.
 
 
