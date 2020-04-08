@@ -9,6 +9,14 @@ In this project, a tidy data set it produced that averages accelerometer and gyr
 # Information
 The data set TidyData.txt is produced by running the script run_analysis.R, which will extract data from the raw_data catalogue and compute the average movement signals per user and activity. See codebook.md for more information regarding the methods used.
 
+The workflow of run_analysis is:
+* Load files from raw_data
+* Find the fatures containing mean and std values, using grep
+* Merge train and test data
+* Merge the train and test data with activity and user data
+* Create the new data set, that averages the movements data per user and acitivty, using aggregate
+* Write to file
+
 # Instruction
 1. Clone this repo
 2. Run run_analysis.R with R version 3.6.3 
