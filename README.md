@@ -1,10 +1,10 @@
 In this project, a tidy data set it produced that averages accelerometer and gyroscope data collected from smart phones. The data is summarized per individual user and the activity the user performed (i.e running, walking, standing etc).
 
 # Files
-TidyData.txt - The tidy data set that contains average accelerometer and gyroscope signals per user and avtivity
-codebook.md - Describes all features in TidyData.txt
-run_analysis.R - The script that produces TidyData.txt
-raw_data - A catalog containing the raw data, including descriptive files
+* TidyData.txt - The tidy data set that contains average accelerometer and gyroscope signals per user and avtivity
+* codebook.md - Describes all features in TidyData.txt
+* run_analysis.R - The script that produces TidyData.txt
+* raw_data - A catalog containing the raw data, including descriptive files
 
 # Information
 The data set TidyData.txt is produced by running the script run_analysis.R, which will extract data from the raw_data catalogue and compute the average movement signals per user and activity. See codebook.md for more information regarding the methods used.
