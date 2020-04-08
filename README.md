@@ -11,7 +11,7 @@ The data set TidyData.txt is produced by running the script run_analysis.R, whic
 
 The workflow of run_analysis is:
 * Load files from raw_data
-* Find the fatures containing mean and std values, using grep
+* Find the features containing mean and std values, using grep
 * Merge train and test data
 * Merge the train and test data with activity and user data
 * Create the new data set, that averages the movements data per user and acitivty, using aggregate
